@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ting-Yung (Felix) Chang</title>
+<meta name="description" content="Ting-Yung (Felix) Chang — M.S. student at National Taiwan University working on deep reinforcement learning for autonomous UAV inspection.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5f6368;
+    --accent: #b3261e;
+    --line: #e6e6e6;
+    --card: #fafafa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #ececec;
+      --muted: #a0a0a0;
+      --accent: #ff7a6e;
+      --line: #2a2a2a;
+      --card: #1b1b1b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Inter, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+  header { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+  .photo {
+    width: 140px; height: 140px; border-radius: 50%;
+    object-fit: cover; border: 1px solid var(--line); background: var(--card);
+  }
+  h1 { font-size: 30px; margin: 0 0 4px; font-weight: 700; }
+  .role { color: var(--muted); margin: 0 0 12px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 0; margin: 0; list-style: none; }
+  .links a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  .links a:hover { text-decoration: underline; }
+  h2 {
+    font-size: 20px; margin: 44px 0 14px; padding-bottom: 6px;
+    border-bottom: 1px solid var(--line); font-weight: 600;
+  }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); }
+  .news li { margin-bottom: 6px; }
+  .news .date { color: var(--muted); display: inline-block; min-width: 82px; font-variant-numeric: tabular-nums; }
+  .pub {
+    display: grid; grid-template-columns: 220px 1fr; gap: 20px;
+    padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--card);
+    margin-bottom: 16px;
+  }
+  .pub:not(:has(img)) { grid-template-columns: 1fr; }
+  .pub img, .pub .thumb {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px;
+    background: var(--line);
+  }
+  .pub-title { font-weight: 600; margin: 0 0 4px; }
+  .pub-authors, .pub-venue { margin: 0; color: var(--muted); font-size: 15px; }
+  .pub-authors b { color: var(--fg); }
+  .pub-highlights { margin: 8px 0 8px 18px; padding: 0; font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .tags a {
+    font-size: 14px; padding: 2px 10px; border: 1px solid var(--line);
+    border-radius: 999px; text-decoration: none;
+  }
+  .edu-item, .proj-item { margin-bottom: 14px; }
+  .edu-item b, .proj-item b { display: block; }
+  .meta { color: var(--muted); font-size: 15px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skills span {
+    font-size: 14px; padding: 3px 10px; border-radius: 6px;
+    background: var(--card); border: 1px solid var(--line);
+  }
+  footer { margin-top: 56px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) {
+    .wrap { padding-top: 32px; }
+    header { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .photo { width: 112px; height: 112px; }
+    .pub { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <!-- Replace photo.jpg with your own headshot in the repo root -->
+    <img class="photo" src="photo.jpg" alt="Ting-Yung (Felix) Chang">
+    <div>
+      <h1>Ting-Yung (Felix) Chang</h1>
+      <p class="role">M.S. Student, Department of Civil Engineering, National Taiwan University</p>
+      <ul class="links">
+        <li><a href="mailto:highup023@gmail.com">Email</a></li>
+        <li><a href="https://github.com/TingYung0223">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/%E5%AE%9A%E5%A2%89-%E5%BC%B5-tingyung">LinkedIn</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <h2>About</h2>
+  <p>
+    I am a master's student in the Computer-Aided Engineering Group, Department of Civil Engineering, National Taiwan University,
+    advised by Prof. Rih-Teng Wu.
+    I work on <b>deep reinforcement learning for autonomous aerial robots</b>: policies that decide
+    where a UAV should look, how it should move, and when its job is done.
+  </p>
+  <p>
+    My current project teaches a UAV to find, follow and finish cracks on 3D bridge piers with continuous
+    control, an explicit surface memory, and validation on the ArduPilot flight stack. Next, I am taking
+    this policy from simulation to real flight.
+  </p>
+  <p>
+    Interests: robot learning, sim-to-real transfer, active perception, aerial autonomy.
+  </p>
+
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="date">2026.07</span> Presented a UAV-based robotic inspection framework at EASEC-19 in Kuala Lumpur, Malaysia.</li>
+    <!-- <li><span class="date">2027.xx</span> Real-flight experiments started.</li> -->
+  </ul>
+
+  <h2>Publications</h2>
+
+  <div class="pub">
+    <div>
+      <p class="pub-title">A UAV-based robotic inspection framework for surface damage exploration in structural health monitoring</p>
+      <p class="pub-authors"><b>Ting-Yung Chang</b>, Yung-I Chang, Rih-Teng Wu</p>
+      <p class="pub-venue">19th East Asia-Pacific Conference on Structural Engineering and Construction (EASEC-19), Kuala Lumpur, Malaysia, 2026</p>
+    </div>
+  </div>
+
+  <h2>Honors &amp; Awards</h2>
+  <div class="proj-item">
+    <b>Gold Award, National Engineering College Creativity Competition</b>
+    <span class="meta">AI-driven traffic management for a bridge retrofit.</span>
+  </div>
+  <div class="proj-item">
+    <b>Silver Medal, Fupin AI Innovation Competition</b>
+    <span class="meta">Intelligent engineering knowledge base for digital transformation in engineering practice.</span>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="proj-item">
+    <b>AI traffic management for bridge retrofit</b>
+    <span class="meta">Used YOLO to count traffic flow in every direction, adapted signal timing to real-time demand, and trained a model on directional flows to allocate reversible lanes. Gold Award, National Engineering College Creativity Competition.</span>
+  </div>
+  <div class="proj-item">
+    <b>Intelligent engineering knowledge base</b>
+    <span class="meta">Extracted structured data from engineering drawings, organized it into a knowledge graph, and connected it to a locally deployed LLM to assist engineers with retrieval and decision support. Silver Medal, Fupin AI Innovation Competition.</span>
+  </div>
+  <div class="proj-item">
+    <b>UAV autonomy stack in ArduPilot SITL</b>
+    <span class="meta">ROS 2 node that runs learned policies on ArduCopter over MAVLink with EKF state, body-velocity setpoints and a safety fence; Gazebo Harmonic RGB-D simulation.</span>
+  </div>
+
+  <h2>Education</h2>
+  <div class="edu-item">
+    <b>National Taiwan University</b>
+    <span class="meta">M.S., Civil Engineering, Computer-Aided Engineering Group, 2026 – 2028 (expected)</span>
+  </div>
+  <div class="edu-item">
+    <b>National Taiwan University</b>
+    <span class="meta">B.S., Civil Engineering, 2022 – 2026</span>
+  </div>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Python</span><span>PyTorch</span><span>Stable-Baselines3</span><span>Deep RL (PPO, DQN, recurrent PPO)</span>
+    <span>ROS 2</span><span>Gazebo Harmonic</span><span>ArduPilot / MAVLink</span><span>Blender</span>
+    <span>OpenCV</span><span>Linux</span><span>Git</span>
+  </div>
+
+  <footer>Last updated: November 2026</footer>
+</div>
+</body>
+</html>
